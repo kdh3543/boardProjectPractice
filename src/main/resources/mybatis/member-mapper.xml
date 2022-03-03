@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="member">
+  	<insert id="signUp">
+  		insert into member values(mem_seq.nextval,#{id},#{pw},#{name},#{contact})
+  	</insert>
+  	<select id="login" resultType="int">
+  		select count(*) from member
+  	</select>
+  	<select id="idExist" resultType="int">
+  		select count(*) from member where id=#{value}
+  	</select>
+  </mapper>
