@@ -14,10 +14,7 @@
           box-sizing: border-box;
         }
 
-        div {
-          border: 1px solid black;
-
-        }
+        
 
         #board {
           width: 700px;
@@ -79,6 +76,7 @@
           height: 5%;
           text-align: center;
           line-height: 40px;
+          border-bottom: 3px solid black;
         }
 
         #middleHeader>div {
@@ -91,6 +89,7 @@
           height: 95%;
           text-align: center;
           overflow-y: auto;
+          
         }
 
         #middleNo {
@@ -117,6 +116,7 @@
           width: 100%;
           height: 70px;
           line-height: 70px;
+          border-bottom: 1px solid black;
         }
 
         #middleMainContainer>div{

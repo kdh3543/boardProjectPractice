@@ -82,4 +82,8 @@ public class BoardDAO {
 		map.put("end", end);
 		return mybatis.selectList("board.selectByBound",map);
 	}
+	
+	public int addViewCount(int seq) {
+		return mybatis.update("board.addViewCount",seq);
+	}
 }

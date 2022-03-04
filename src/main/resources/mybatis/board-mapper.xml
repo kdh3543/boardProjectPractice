@@ -52,4 +52,7 @@
   		select * from (select board.*, row_number() over(order by seq desc) rn 
 		from board)where rn between #{start} and #{end}
   	</select>
+  	<update id="addViewCount">
+  		update board set view_count = view_count + 1 where seq = #{value}
+  	</update>
   </mapper>

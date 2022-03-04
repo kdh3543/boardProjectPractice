@@ -173,6 +173,10 @@ public class BoardService {
 	public List<BoardDTO> selectByBound(int start, int end){
 		return bdao.selectByBound(start, end);
 	}
+	
+	public int addViewCount(int seq) {
+		return bdao.addViewCount(seq);
+	}
 
 	
 }

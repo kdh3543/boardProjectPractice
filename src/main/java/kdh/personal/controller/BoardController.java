@@ -67,6 +67,7 @@ public class BoardController {
 	public String selectContents(int seq, Model model){
 		String id = (String)session.getAttribute("loginId");
 		BoardDTO dto = bService.selectContents(seq);
+		bService.addViewCount(seq);
 		model.addAttribute("dto",dto);
 		model.addAttribute("id",id);
 		return "/board/writeView";
